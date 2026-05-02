@@ -152,13 +152,21 @@
 
               <button
                 type="submit"
-                class="w-full px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                :disabled="isSubmitting"
+                class="w-full px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
               >
-                Send Message
+                <svg v-if="isSubmitting" class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                </svg>
+                {{ isSubmitting ? 'Sending...' : 'Send Message' }}
               </button>
 
-              <p v-if="submitMessage" class="text-center text-green-600 dark:text-green-400 font-medium">
-                {{ submitMessage }}
+              <p v-if="submitMessage" class="text-center text-green-600 dark:text-green-400 font-medium bg-green-50 dark:bg-green-900/20 rounded-lg px-4 py-3">
+                ✅ {{ submitMessage }}
+              </p>
+              <p v-if="errorMessage" class="text-center text-red-600 dark:text-red-400 font-medium bg-red-50 dark:bg-red-900/20 rounded-lg px-4 py-3">
+                ❌ {{ errorMessage }}
               </p>
             </div>
           </form>
@@ -181,24 +189,59 @@ export default {
       message: ''
     })
 
+    const isSubmitting = ref(false)
     const submitMessage = ref('')
+    const errorMessage = ref('')
 
-    const handleSubmit = () => {
-      submitMessage.value = 'Thank you for your message! I will get back to you soon.'
-      formData.value = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+    const handleSubmit = async () => {
+      isSubmitting.value = true
+      submitMessage.value = ''
+      errorMessage.value = ''
+
+      try {
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            service_id: serviceId,
+            template_id: templateId,
+            user_id: publicKey,
+            template_params: {
+              name: formData.value.name,
+              email: formData.value.email,
+              subject: formData.value.subject,
+              message: formData.value.message,
+              title: formData.value.subject
+            }
+          })
+        })
+
+        if (response.ok) {
+          submitMessage.value = 'Message sent! I\'ll get back to you soon.'
+          formData.value = { name: '', email: '', subject: '', message: '' }
+        } else {
+          throw new Error('Failed to send message.')
+        }
+      } catch (err) {
+        errorMessage.value = 'Something went wrong. Please email me directly at semredemssie36@gmail.com'
+      } finally {
+        isSubmitting.value = false
+        setTimeout(() => {
+          submitMessage.value = ''
+          errorMessage.value = ''
+        }, 6000)
       }
-      setTimeout(() => {
-        submitMessage.value = ''
-      }, 5000)
     }
 
     return {
       formData,
+      isSubmitting,
       submitMessage,
+      errorMessage,
       handleSubmit
     }
   }
