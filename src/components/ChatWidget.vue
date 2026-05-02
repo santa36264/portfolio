@@ -7,7 +7,7 @@
       <div
         v-if="isOpen"
         class="w-80 sm:w-96 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden"
-        style="height: 520px; transform-origin: bottom left;"
+        style="height: min(520px, calc(100vh - 100px)); transform-origin: bottom left;"
       >
         <!-- Header -->
         <div class="flex items-center justify-between px-4 py-3 bg-blue-600 dark:bg-blue-700">
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Messages -->
-        <div ref="messagesContainer" class="flex-1 overflow-y-auto p-4 space-y-3 scroll-smooth">
+        <div ref="messagesContainer" class="flex-1 overflow-y-auto p-4 space-y-3 scroll-smooth min-h-0">
           <!-- Welcome message -->
           <div class="flex items-start gap-2">
             <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
