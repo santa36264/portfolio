@@ -25,7 +25,7 @@
           <div class="relative">
             <div class="w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/profile.jpg" 
+                src="/download.png" 
                 alt="Semre Demssie" 
                 class="w-full h-full object-cover"
               />
