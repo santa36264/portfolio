@@ -17,7 +17,7 @@
               <div class="min-w-0">
                 <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Email</p>
                 <a href="mailto:semredemssie36@gmail.com" class="text-sm sm:text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
-                  semredemssie36@gmail.com
+                  semredemssie83@gmail.com
                 </a>
               </div>
             </div>
