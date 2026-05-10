@@ -35,7 +35,7 @@
               <div>
                 <p class="text-sm text-gray-600 dark:text-gray-400">Email</p>
                 <a href="mailto:semredemssie36@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                  semredemssie36@gmail.com
+                  semredemssie83@gmail.com
                 </a>
               </div>
             </div>
