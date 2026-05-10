@@ -12,7 +12,7 @@
         <div class="mb-6 sm:mb-8" data-aos="fade-down">
           <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 sm:mb-6 rounded-full bg-blue-600 dark:bg-blue-500 p-1 shadow-2xl">
             <img 
-              src="/profile.jpg" 
+              src="/download.png" 
               alt="Semre Demssie" 
               class="w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-900"
             />
