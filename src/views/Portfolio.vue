@@ -134,7 +134,7 @@ export default {
         title: 'Hotel Booking System',
         description: 'Full-stack booking system with admin panel for managing reservations, rooms, and customer data. Features include real-time availability, payment integration, and booking management.',
         category: 'Full-Stack',
-        techStack: ['Django', 'Vue.js', 'MySQL', 'REST API', 'Stripe'],
+        techStack: ['Laravel', 'Vue.js', 'MySQL', 'REST API', 'Stripe'],
         year: '2025',
         image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800'
       },
@@ -143,7 +143,7 @@ export default {
         title: 'Task Manager App',
         description: 'Real-time task management application with user authentication and collaborative features. Includes task assignment, priority levels, and deadline tracking.',
         category: 'Full-Stack',
-        techStack: ['Node.js', 'Express', 'MongoDB', 'Vue.js', 'Socket.io'],
+        techStack: ['Node.js', 'Express', 'MongoDB', 'React.js', 'Socket.io'],
         year: '2025',
         image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800'
       },
@@ -152,7 +152,7 @@ export default {
         title: 'E-Commerce Dashboard',
         description: 'Comprehensive admin dashboard with product management, sales analytics, and inventory tracking. Features interactive charts and real-time data updates.',
         category: 'Full-Stack',
-        techStack: ['Laravel', 'React', 'MySQL', 'Chart.js', 'Redis'],
+        techStack: ['Laravel', 'Vue.js', 'MySQL', 'Chart.js', 'Redis'],
         year: '2026',
         image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800'
       },
