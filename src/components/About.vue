@@ -23,6 +23,32 @@
               and deliver high-quality solutions. Whether it's building a complex web application or a 
               feature-rich mobile app, I bring dedication, creativity, and technical excellence to every project.
             </p>
+            
+            <!-- Resume Download Button -->
+            <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/resume/SEMRE_DEMSSIE_MEKONNEN_FlowCV_Resume_2026-04-28.pdf"
+                  download="Semre_Demssie_Resume.pdf"
+                  class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                  Download Resume
+                </a>
+                <router-link
+                  to="/resume"
+                  class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg font-semibold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transform hover:scale-105 transition-all duration-300"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  View Full Resume
+                </router-link>
+              </div>
+            </div>
           </div>
         </div>
 

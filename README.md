@@ -99,7 +99,7 @@ MIT License - Feel free to use this template for your own portfolio!
 ## 🤝 Connect
 
 - **GitHub:** [santa36264](https://github.com/santa36264)
-- **LinkedIn:** [Semre Demssie](https://www.linkedin.com/in/semre-demssie-9728b73a8/)
+- **LinkedIn:** [Semre Demssie](https://www.linkedin.com/in/semre-demssie-957870428/)
 - **Email:** semredemssie36@gmail.com
 
 ---

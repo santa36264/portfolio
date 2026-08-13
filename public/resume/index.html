@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semre Demssie - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #1f2937;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .header .title {
+            font-size: 20px;
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .header .contact {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #1f2937;
+            margin-bottom: 20px;
+            border-left: 5px solid #2563eb;
+            padding-left: 20px;
+            font-weight: 700;
+        }
+        
+        .summary {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .job::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #2563eb;
+            border-radius: 50%;
+        }
+        
+        .job h3 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .job .company {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .job .period {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .job ul {
+            margin-left: 0;
+            list-style: none;
+        }
+        
+        .job li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .job li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        
+        .technologies {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tech-tag {
+            background: #f3f4f6;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category h3 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #3b82f6;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .education-item h3 {
+            font-size: 16px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .education-item .institution {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .education-item .details {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 4px;
+            font-size: 13px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+        }
+        
+        .project {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .project h3 {
+            color: #1f2937;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .project .desc {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .project-highlights {
+            list-style: none;
+            margin: 10px 0;
+        }
+        
+        .project-highlights li {
+            margin-bottom: 4px;
+            font-size: 13px;
+            position: relative;
+            padding-left: 15px;
+            color: #374151;
+        }
+        
+        .project-highlights li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-size: 10px;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .cert h4 {
+            color: #92400e;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .cert .issuer {
+            color: #b45309;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .cert .date {
+            color: #a16207;
+            font-size: 12px;
+        }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                font-size: 12px;
+            }
+            
+            .container {
+                max-width: none;
+                padding: 20px 0;
+            }
+            
+            .section {
+                margin-bottom: 25px;
+                page-break-inside: avoid;
+            }
+            
+            .job {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Semre Demssie</h1>
+            <div class="title">Full-Stack Developer & Flutter Mobile Developer</div>
+            <div class="contact">
+                <div class="contact-item">📧 semredemssie36@gmail.com</div>
+                <div class="contact-item">📍 Addis Ababa, Ethiopia</div>
+                <div class="contact-item">🌐 https://semredemssie.dev</div>
+                <div class="contact-item">💼 linkedin.com/in/semre-demssie-9728b73a8</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Experienced Full-Stack Developer with 3+ years of expertise in building scalable web applications and mobile solutions. 
+                Proficient in modern frameworks like Vue.js, Django, Node.js, Laravel, and Flutter. Passionate about creating clean, 
+                efficient code and delivering exceptional user experiences. Proven track record of leading projects from conception to 
+                deployment with measurable business impact.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="job">
+                <h3>Senior Full-Stack Developer</h3>
+                <div class="company">TechSolutions Ethiopia</div>
+                <div class="period">Jan 2023 - Present • Addis Ababa, Ethiopia</div>
+                <ul>
+                    <li>Lead development of enterprise web applications serving 10,000+ users</li>
+                    <li>Architected microservices infrastructure reducing system downtime by 40%</li>
+                    <li>Mentored junior developers and conducted code reviews</li>
+                    <li>Implemented CI/CD pipelines improving deployment efficiency by 60%</li>
+                    <li>Collaborated with cross-functional teams to deliver projects on time</li>
+                </ul>
+                <div class="technologies">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+            </div>
+            
+            <div class="job">
+                <h3>Full-Stack Developer</h3>
+                <div class="company">Digital Innovations Hub</div>
+                <div class="period">Mar 2022 - Dec 2022 • Addis Ababa, Ethiopia</div>
+                <ul>
+                    <li>Developed 15+ responsive web applications using modern frameworks</li>
+                    <li>Built RESTful APIs handling 50,000+ daily requests</li>
+                    <li>Optimized database queries resulting in 35% performance improvement</li>
+                    <li>Integrated third-party payment gateways and APIs</li>
+                    <li>Participated in agile development cycles and sprint planning</li>
+                </ul>
+                <div class="technologies">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">Stripe API</span>
+                </div>
+            </div>
+            
+            <div class="job">
+                <h3>Mobile App Developer</h3>
+                <div class="company">MobileFirst Solutions</div>
+                <div class="period">Jun 2021 - Feb 2022 • Addis Ababa, Ethiopia</div>
+                <ul>
+                    <li>Developed 5+ Flutter mobile applications for iOS and Android</li>
+                    <li>Implemented real-time chat features using Firebase</li>
+                    <li>Created offline-first architecture for improved user experience</li>
+                    <li>Conducted user testing and iterative improvements</li>
+                    <li>Published apps to Google Play Store and Apple App Store</li>
+                </ul>
+                <div class="technologies">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">REST APIs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skills">
+                        <span class="skill">Vue.js</span>
+                        <span class="skill">React</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">TypeScript</span>
+                        <span class="skill">HTML5</span>
+                        <span class="skill">CSS3</span>
+                        <span class="skill">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills">
+                        <span class="skill">Django</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Express</span>
+                        <span class="skill">Laravel</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mobile</h3>
+                    <div class="skills">
+                        <span class="skill">Flutter</span>
+                        <span class="skill">Dart</span>
+                        <span class="skill">React Native</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skills">
+                        <span class="skill">PostgreSQL</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">SQLite</span>
+                        <span class="skill">Redis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Software Engineering</h3>
+                <div class="institution">Addis Ababa University</div>
+                <div class="details">2018 - 2022 • Addis Ababa, Ethiopia • GPA: 3.8/4.0</div>
+                <ul class="achievements">
+                    <li>Dean's List for 6 consecutive semesters</li>
+                    <li>President of Software Engineering Students Association</li>
+                    <li>Winner of University Hackathon 2021</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project">
+                <h3>Hotel Luxury Booking System</h3>
+                <div class="desc">Enterprise hotel management platform with real-time booking and payment processing</div>
+                <div class="technologies">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Stripe</span>
+                </div>
+                <ul class="project-highlights">
+                    <li>40% increase in booking conversion rate</li>
+                    <li>500+ concurrent bookings handled during peak seasons</li>
+                    <li>Real-time availability synchronization</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>TeamSync Task Manager</h3>
+                <div class="desc">Collaborative project management platform with real-time updates</div>
+                <div class="technologies">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Socket.io</span>
+                </div>
+                <ul class="project-highlights">
+                    <li>35% improvement in team productivity</li>
+                    <li>1000+ active users across 50+ teams</li>
+                    <li>Real-time collaboration features</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>ChatFlow Mobile App</h3>
+                <div class="desc">Secure messaging application with end-to-end encryption</div>
+                <div class="technologies">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Cloud Functions</span>
+                </div>
+                <ul class="project-highlights">
+                    <li>10,000+ downloads in first 3 months</li>
+                    <li>4.8/5 average user rating</li>
+                    <li>99.9% message delivery success rate</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications">
+                <div class="cert">
+                    <h4>AWS Certified Solutions Architect</h4>
+                    <div class="issuer">Amazon Web Services</div>
+                    <div class="date">2026</div>
+                </div>
+                <div class="cert">
+                    <h4>Flutter Development Bootcamp</h4>
+                    <div class="issuer">Google Developers</div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="cert">
+                    <h4>Full-Stack Web Development</h4>
+                    <div class="issuer">freeCodeCamp</div>
+                    <div class="date">2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

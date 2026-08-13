@@ -4,6 +4,7 @@
     <About />
     <Skills />
     <FeaturedProjects />
+    <Testimonials />
     <GitHubStats :isDarkMode="isDarkMode" />
     <CallToAction />
   </div>
@@ -15,6 +16,7 @@ import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
 import Skills from '../components/Skills.vue'
 import FeaturedProjects from '../components/FeaturedProjects.vue'
+import Testimonials from '../components/Testimonials.vue'
 import GitHubStats from '../components/GitHubStats.vue'
 import CallToAction from '../components/CallToAction.vue'
 
@@ -25,6 +27,7 @@ export default {
     About,
     Skills,
     FeaturedProjects,
+    Testimonials,
     GitHubStats,
     CallToAction
   },

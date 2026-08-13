@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .test-item { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Component Test</h1>
+    <div id="app">
+        <div class="test-item">
+            <h3>Basic Vue Test</h3>
+            <p class="success">Vue is working: {{ message }}</p>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+        
+        createApp({
+            data() {
+                return {
+                    message: 'Portfolio components are loading correctly!'
+                }
+            }
+        }).mount('#app');
+        
+        console.log('Test file loaded successfully');
+    </script>
+</body>
+</html>

@@ -40,7 +40,7 @@
             </div>
             <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl rounded-tl-none px-3 py-2 max-w-[85%]">
               <p class="text-sm text-gray-800 dark:text-gray-200">
-                Hi! I'm powered by Groq AI. Ask me anything about Semre's work, skills, or projects!
+                Hi! I'm powered by sataab. Ask me anything about Semre's work, skills, or projects!
               </p>
             </div>
           </div>

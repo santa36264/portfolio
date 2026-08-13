@@ -31,23 +31,31 @@
           </h1>
           
           <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
-            <span>{{ post.date }}</span>
+            <span>{{ formatDate(post.publishedAt) }}</span>
             <span>•</span>
-            <span>{{ post.readTime }} min read</span>
+            <span>{{ post.readingTime }} min read</span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              {{ post.views }} views
+            </span>
           </div>
         </div>
 
         <!-- Featured Image -->
         <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl" data-aos="zoom-in">
           <img 
-            src="https://picsum.photos/seed/article/1200/800" 
-            alt="Article Cover"
+            :src="post.image" 
+            :alt="post.title"
             class="w-full h-96 object-cover"
           />
         </div>
 
         <!-- Article Content -->
-        <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-6" v-html="post.content"></div>
+        <div class="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed space-y-6" v-html="post.content"></div>
 
         <!-- Tags -->
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
@@ -105,6 +113,7 @@
 <script>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { blogPosts } from '../data/blogData.js'
 
 export default {
   name: 'BlogPost',
@@ -112,213 +121,22 @@ export default {
     const route = useRoute()
     const post = ref(null)
     
-    const posts = {
-      'building-modern-web-apps-with-vue': {
-        title: 'Building Modern Web Applications with Vue.js 3',
-        category: 'Web Development',
-        date: 'March 15, 2024',
-        readTime: 8,
-        tags: ['Vue.js', 'JavaScript', 'Web Development', 'Frontend'],
-        content: `
-          <p>Vue.js 3 has revolutionized the way we build modern web applications. With the introduction of the Composition API, improved TypeScript support, and better performance, Vue 3 is more powerful than ever.</p>
-          
-          <h2>Why Vue.js 3?</h2>
-          <p>Vue.js 3 brings several improvements over Vue 2, including better performance, smaller bundle sizes, and improved TypeScript support. The Composition API provides a more flexible way to organize component logic.</p>
-          
-          <h2>Getting Started</h2>
-          <p>To start building with Vue 3, you'll need Node.js installed on your machine. You can create a new project using Vite, which provides lightning-fast development experience.</p>
-          
-          <pre><code>npm create vite@latest my-vue-app -- --template vue
-cd my-vue-app
-npm install
-npm run dev</code></pre>
-          
-          <h2>Composition API</h2>
-          <p>The Composition API is one of the most significant additions to Vue 3. It allows you to organize component logic by feature rather than by option type, making your code more maintainable and reusable.</p>
-          
-          <h2>Best Practices</h2>
-          <ul>
-            <li>Use the Composition API for complex components</li>
-            <li>Leverage TypeScript for better type safety</li>
-            <li>Implement proper state management with Pinia</li>
-            <li>Optimize performance with lazy loading</li>
-            <li>Write comprehensive tests</li>
-          </ul>
-          
-          <h2>Conclusion</h2>
-          <p>Vue.js 3 is an excellent choice for building modern web applications. Its simplicity, flexibility, and powerful features make it a joy to work with. Start building your next project with Vue 3 today!</p>
-        `
-      },
-      'flutter-best-practices': {
-        title: 'Flutter Development Best Practices for 2024',
-        category: 'Mobile Development',
-        date: 'March 10, 2024',
-        readTime: 6,
-        tags: ['Flutter', 'Mobile', 'Dart', 'Best Practices'],
-        content: `
-          <p>Flutter has become one of the most popular frameworks for building cross-platform mobile applications. Here are the best practices you should follow in 2024.</p>
-          
-          <h2>Project Structure</h2>
-          <p>Organize your Flutter project with a clear folder structure. Separate your code into features, models, services, and widgets for better maintainability.</p>
-          
-          <h2>State Management</h2>
-          <p>Choose the right state management solution for your app. Popular options include Provider, Riverpod, Bloc, and GetX. Each has its strengths depending on your project needs.</p>
-          
-          <h2>Performance Optimization</h2>
-          <ul>
-            <li>Use const constructors wherever possible</li>
-            <li>Implement lazy loading for large lists</li>
-            <li>Optimize images and assets</li>
-            <li>Profile your app regularly</li>
-          </ul>
-          
-          <h2>Testing</h2>
-          <p>Write unit tests, widget tests, and integration tests to ensure your app works correctly across different scenarios.</p>
-        `
-      },
-      'rest-api-design-principles': {
-        title: 'RESTful API Design Principles Every Developer Should Know',
-        category: 'Backend',
-        date: 'March 5, 2024',
-        readTime: 10,
-        tags: ['API', 'REST', 'Backend', 'Web Services'],
-        content: `
-          <p>Designing a good RESTful API is crucial for building scalable and maintainable web services. Here are the key principles you should follow.</p>
-          
-          <h2>Use HTTP Methods Correctly</h2>
-          <ul>
-            <li>GET - Retrieve resources</li>
-            <li>POST - Create new resources</li>
-            <li>PUT - Update entire resources</li>
-            <li>PATCH - Partial updates</li>
-            <li>DELETE - Remove resources</li>
-          </ul>
-          
-          <h2>Resource Naming</h2>
-          <p>Use nouns for resource names, not verbs. Keep URLs simple and intuitive. Use plural nouns for collections.</p>
-          
-          <h2>Status Codes</h2>
-          <p>Return appropriate HTTP status codes: 200 for success, 201 for created, 400 for bad requests, 404 for not found, 500 for server errors.</p>
-          
-          <h2>Versioning</h2>
-          <p>Always version your API to maintain backward compatibility. Use URL versioning like /api/v1/ or header versioning.</p>
-        `
-      },
-      'tailwind-css-tips': {
-        title: '10 Tailwind CSS Tips to Speed Up Your Development',
-        category: 'CSS',
-        date: 'February 28, 2024',
-        readTime: 5,
-        tags: ['Tailwind', 'CSS', 'Frontend', 'Tips'],
-        content: `
-          <p>Tailwind CSS is a powerful utility-first CSS framework. Here are 10 tips to make you more productive.</p>
-          
-          <h2>1. Use @apply for Repeated Patterns</h2>
-          <p>Extract common utility combinations into custom classes using @apply directive.</p>
-          
-          <h2>2. Customize Your Config</h2>
-          <p>Extend Tailwind's default theme in tailwind.config.js to match your design system.</p>
-          
-          <h2>3. Use JIT Mode</h2>
-          <p>Just-In-Time mode generates styles on-demand, resulting in faster build times and smaller CSS files.</p>
-          
-          <h2>4. Leverage Plugins</h2>
-          <p>Use official and community plugins to extend Tailwind's functionality.</p>
-          
-          <h2>5. Responsive Design</h2>
-          <p>Use responsive prefixes (sm:, md:, lg:, xl:) to create mobile-first designs easily.</p>
-        `
-      },
-      'django-performance-optimization': {
-        title: 'Django Performance Optimization Techniques',
-        category: 'Backend',
-        date: 'February 20, 2024',
-        readTime: 12,
-        tags: ['Django', 'Python', 'Performance', 'Optimization'],
-        content: `
-          <p>Django is a powerful web framework, but it needs proper optimization for production applications. Here's how to make your Django app faster.</p>
-          
-          <h2>Database Optimization</h2>
-          <ul>
-            <li>Use select_related() and prefetch_related() to reduce queries</li>
-            <li>Add database indexes on frequently queried fields</li>
-            <li>Use database connection pooling</li>
-            <li>Implement query result caching</li>
-          </ul>
-          
-          <h2>Caching Strategies</h2>
-          <p>Implement caching at multiple levels: database queries, template fragments, and full pages. Use Redis or Memcached for distributed caching.</p>
-          
-          <h2>Static Files</h2>
-          <p>Use a CDN for static files, enable compression, and implement browser caching headers.</p>
-          
-          <h2>Async Views</h2>
-          <p>Use Django's async views for I/O-bound operations to improve concurrency.</p>
-        `
-      },
-      'responsive-design-2024': {
-        title: 'Responsive Web Design in 2024: A Complete Guide',
-        category: 'Web Development',
-        date: 'February 15, 2024',
-        readTime: 7,
-        tags: ['Responsive', 'CSS', 'Web Design', 'Mobile'],
-        content: `
-          <p>Responsive web design is more important than ever. Here's everything you need to know in 2024.</p>
-          
-          <h2>Mobile-First Approach</h2>
-          <p>Start designing for mobile devices first, then progressively enhance for larger screens.</p>
-          
-          <h2>Modern CSS Features</h2>
-          <ul>
-            <li>CSS Grid for complex layouts</li>
-            <li>Flexbox for flexible components</li>
-            <li>Container queries for component-based responsiveness</li>
-            <li>CSS custom properties for dynamic theming</li>
-          </ul>
-          
-          <h2>Breakpoints</h2>
-          <p>Use meaningful breakpoints based on content, not specific devices. Common breakpoints: 640px, 768px, 1024px, 1280px.</p>
-          
-          <h2>Testing</h2>
-          <p>Test on real devices, use browser dev tools, and implement automated responsive testing.</p>
-        `
-      },
-      'firebase-flutter-integration': {
-        title: 'Integrating Firebase with Flutter: A Step-by-Step Guide',
-        category: 'Mobile Development',
-        date: 'February 10, 2024',
-        readTime: 9,
-        tags: ['Firebase', 'Flutter', 'Mobile', 'Backend'],
-        content: `
-          <p>Firebase provides a complete backend solution for Flutter apps. Here's how to integrate it step by step.</p>
-          
-          <h2>Setup Firebase Project</h2>
-          <p>Create a new Firebase project in the Firebase Console, then add your Flutter app for both iOS and Android.</p>
-          
-          <h2>Install Dependencies</h2>
-          <pre><code>flutter pub add firebase_core
-flutter pub add firebase_auth
-flutter pub add cloud_firestore</code></pre>
-          
-          <h2>Initialize Firebase</h2>
-          <p>Initialize Firebase in your main.dart file before running the app.</p>
-          
-          <h2>Authentication</h2>
-          <p>Implement email/password authentication, Google Sign-In, or other providers using Firebase Auth.</p>
-          
-          <h2>Firestore Database</h2>
-          <p>Use Cloud Firestore for real-time data synchronization across devices.</p>
-        `
-      }
-    }
-    
     onMounted(() => {
       const slug = route.params.slug
-      post.value = posts[slug] || null
+      post.value = blogPosts.find(p => p.slug === slug) || null
     })
+
+    const formatDate = (dateString) => {
+      return new Date(dateString).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    }
     
     return {
-      post
+      post,
+      formatDate
     }
   }
 }

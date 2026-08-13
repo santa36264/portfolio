@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
-          <a href="https://portfolio-ds2i.vercel.app" class="flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
             <img src="/logo.png" alt="SD Logo" class="h-10 w-auto" />SATAAB
           </a>
         </div>

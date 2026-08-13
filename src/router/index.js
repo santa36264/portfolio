@@ -51,6 +51,12 @@ const routes = [
     meta: { title: 'Contact Me - Semre Demssie' }
   },
   {
+    path: '/resume',
+    name: 'Resume',
+    component: () => import('../components/Resume.vue'),
+    meta: { title: 'Resume - Semre Demssie' }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('../views/NotFound.vue'),
