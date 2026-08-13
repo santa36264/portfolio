@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
           <a href="/" class="flex items-center gap-2">
-            <img src="/logo.png" alt="SD Logo" class="h-10 w-auto" /><span class="text-blue-700"> SEM </span>RE
+            <img src="/logo.png" alt="SD Logo" class="h-10 w-auto" /><span class="text-blue-700"> SEM</span>RE
           </a>
         </div>
 
