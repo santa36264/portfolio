@@ -55,7 +55,7 @@
         </div>
 
         <!-- Article Content -->
-        <div class="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed space-y-6" v-html="post.content"></div>
+        <div class="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed space-y-6" v-html="renderedContent"></div>
 
         <!-- Tags -->
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
@@ -111,8 +111,10 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { marked } from 'marked'
+import DOMPurify from 'dompurify'
 import { blogPosts } from '../data/blogData.js'
 
 export default {
@@ -126,6 +128,11 @@ export default {
       post.value = blogPosts.find(p => p.slug === slug) || null
     })
 
+    const renderedContent = computed(() => {
+      if (!post.value) return ''
+      return DOMPurify.sanitize(marked.parse(post.value.content || ''))
+    })
+
     const formatDate = (dateString) => {
       return new Date(dateString).toLocaleDateString('en-US', {
         year: 'numeric',
@@ -136,13 +143,58 @@ export default {
     
     return {
       post,
-      formatDate
+      formatDate,
+      renderedContent
     }
   }
 }
 </script>
 
 <style scoped>
+.prose h1 {
+  @apply text-4xl font-bold text-gray-900 dark:text-white mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-4 space-y-2;
+}
+
+.prose pre {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto mb-6 text-sm;
+}
+
+.prose code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose a {
+  @apply text-blue-600 dark:text-blue-400 underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic my-4 text-gray-600 dark:text-gray-400;
+}
+
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);

@@ -17,7 +17,7 @@ export const services = [
       "Django", "Node.js", "Express", "Laravel",
       "PostgreSQL", "MySQL", "MongoDB", "Redis"
     ],
-    startingPrice: 2500,
+    startingPrice: 1200,
     deliveryTime: "2-8 weeks",
     category: "Development",
     popular: true,
@@ -45,7 +45,7 @@ export const services = [
       "Flutter", "Dart", "Firebase",
       "SQLite", "REST APIs", "WebSockets"
     ],
-    startingPrice: 3000,
+    startingPrice: 1500,
     deliveryTime: "3-10 weeks",
     category: "Development",
     popular: true,
@@ -73,7 +73,7 @@ export const services = [
       "Django REST Framework", "Express.js", "FastAPI",
       "JWT", "OAuth 2.0", "Swagger", "Postman"
     ],
-    startingPrice: 1500,
+    startingPrice: 800,
     deliveryTime: "1-4 weeks",
     category: "Backend",
     popular: false,
@@ -101,7 +101,7 @@ export const services = [
       "PostgreSQL", "MySQL", "MongoDB",
       "Redis", "Elasticsearch", "Database Indexing"
     ],
-    startingPrice: 1000,
+    startingPrice: 500,
     deliveryTime: "1-3 weeks",
     category: "Backend",
     popular: false,
@@ -129,7 +129,7 @@ export const services = [
       "Docker", "GitHub Actions", "AWS", "Nginx",
       "Let's Encrypt", "Monitoring Tools"
     ],
-    startingPrice: 800,
+    startingPrice: 400,
     deliveryTime: "1-2 weeks",
     category: "Infrastructure",
     popular: false,
@@ -158,7 +158,7 @@ export const services = [
       "Code quality tools",
       "Security analysis tools"
     ],
-    startingPrice: 150,
+    startingPrice: 75,
     deliveryTime: "3-7 days",
     category: "Consultation",
     popular: false,
@@ -176,7 +176,7 @@ export const packages = [
     id: 1,
     name: "Starter Package",
     description: "Perfect for small businesses and startups looking to establish their online presence.",
-    price: 2500,
+    price: 1200,
     duration: "2-4 weeks",
     features: [
       "Responsive website (5-8 pages)",
@@ -195,7 +195,7 @@ export const packages = [
     id: 2,
     name: "Professional Package",
     description: "Comprehensive solution for growing businesses with advanced features and integrations.",
-    price: 5500,
+    price: 3000,
     duration: "4-8 weeks",
     features: [
       "Custom web application",
@@ -216,7 +216,7 @@ export const packages = [
     id: 3,
     name: "Enterprise Package",
     description: "Full-scale solution with advanced architecture, security, and scalability features.",
-    price: 12000,
+    price: 6500,
     duration: "8-16 weeks",
     features: [
       "Complex web application",

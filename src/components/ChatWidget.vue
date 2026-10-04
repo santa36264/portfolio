@@ -203,6 +203,11 @@ Keep responses concise and friendly.`
       const text = userInput.value.trim()
       if (!text || isLoading.value) return
 
+      if (!apiKey) {
+        errorMsg.value = 'Missing VITE_GROQ_API_KEY. Add it to your .env file and restart the dev server.'
+        return
+      }
+
       errorMsg.value = ''
       messages.value.push({ role: 'user', content: text })
       userInput.value = ''
@@ -223,7 +228,7 @@ Keep responses concise and friendly.`
             'Authorization': `Bearer ${apiKey}`
           },
           body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
+            model: 'openai/gpt-oss-20b',
             messages: [
               { role: 'system', content: systemPrompt },
               ...messages.value.map(m => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.content }))
