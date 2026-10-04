@@ -107,7 +107,7 @@
               v-model="userInput"
               placeholder="Type a message..."
               rows="1"
-              class="flex-1 text-sm px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+              class="flex-1 text-sm px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
               style="max-height: 100px;"
               @keydown.enter.exact.prevent="sendMessage"
               @input="autoResize"

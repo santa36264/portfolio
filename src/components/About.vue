@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 w-full overflow-hidden">
+  <section id="about" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-transparent w-full overflow-hidden">
     <div class="max-w-6xl mx-auto w-full">
       <h2 class="section-title" data-aos="fade-up">About Me</h2>
       

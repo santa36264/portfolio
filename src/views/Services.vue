@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen pt-20 pb-12 px-4 sm:px-6 lg:px-8 w-full overflow-x-hidden bg-gray-50 dark:bg-gray-900">
+  <div class="min-h-screen pt-20 pb-12 px-4 sm:px-6 lg:px-8 w-full overflow-x-hidden bg-transparent">
     <div class="max-w-7xl mx-auto">
       <!-- Header -->
       <div class="text-center mb-16" data-aos="fade-up">

@@ -87,7 +87,7 @@
                 <div 
                   v-for="feature in service.features" 
                   :key="feature"
-                  class="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                  class="flex items-start gap-3 p-4 bg-transparent rounded-lg"
                 >
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -132,28 +132,28 @@
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Development Process</h3>
               <div class="space-y-4">
-                <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div class="flex items-start gap-4 p-4 bg-transparent rounded-lg">
                   <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                   <div>
                     <h4 class="font-semibold text-gray-900 dark:text-white">Requirements Analysis</h4>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Understanding your needs and defining project scope</p>
                   </div>
                 </div>
-                <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div class="flex items-start gap-4 p-4 bg-transparent rounded-lg">
                   <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                   <div>
                     <h4 class="font-semibold text-gray-900 dark:text-white">Planning & Design</h4>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Creating detailed plans and design mockups</p>
                   </div>
                 </div>
-                <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div class="flex items-start gap-4 p-4 bg-transparent rounded-lg">
                   <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                   <div>
                     <h4 class="font-semibold text-gray-900 dark:text-white">Development & Testing</h4>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Building your solution with regular updates and testing</p>
                   </div>
                 </div>
-                <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div class="flex items-start gap-4 p-4 bg-transparent rounded-lg">
                   <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
                   <div>
                     <h4 class="font-semibold text-gray-900 dark:text-white">Deployment & Support</h4>

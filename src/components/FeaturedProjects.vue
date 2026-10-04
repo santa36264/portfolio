@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 w-full overflow-hidden">
+  <section id="projects" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-transparent w-full overflow-hidden">
     <div class="max-w-7xl mx-auto w-full">
       <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
       <p class="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
@@ -74,45 +74,21 @@
 
 <script>
 import { useRouter } from 'vue-router'
+import { projects } from '../data/projectsData.js'
 
 export default {
   name: 'FeaturedProjects',
   setup() {
     const router = useRouter()
     
-    const featuredProjects = [
-      {
-        id: 1,
-        title: 'Hotel Website',
-        description: 'Full-stack booking system with admin panel for managing reservations, rooms, and customer data.',
-        category: 'Full-Stack',
-        techStack: ['Django', 'Vue.js', 'MySQL', 'REST API'],
-        image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 2,
-        title: 'Task Manager App',
-        description: 'Real-time task management application with user authentication and collaborative features.',
-        category: 'Full-Stack',
-        techStack: ['Node.js', 'Express', 'MongoDB', 'Vue.js'],
-        image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 4,
-        title: 'Flutter Chat App',
-        description: 'Real-time messaging application with push notifications and media sharing capabilities.',
-        category: 'Mobile',
-        techStack: ['Flutter', 'Firebase', 'Cloud Firestore'],
-        image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800'
-      }
-    ]
+    const featuredProjects = projects.slice(0, 3)
     
     const goToProject = (id) => {
       router.push({ name: 'ProjectDetail', params: { id } })
     }
     
     const handleImageError = (event) => {
-      event.target.src = 'https://via.placeholder.com/400x300/6366f1/ffffff?text=Project+Image'
+      event.target.src = '/placeholder.svg'
     }
     
     return {

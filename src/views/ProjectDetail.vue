@@ -174,182 +174,22 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { projects } from '../data/projectsData.js'
 
 export default {
   name: 'ProjectDetail',
   setup() {
     const route = useRoute()
-    const project = ref(null)
+    const project = computed(() => {
+      const projectId = Number(route.params.id)
+      return projects.find(p => p.id === projectId) || null
+    })
     const selectedImageIndex = ref(0)
     
-    const projects = {
-      1: {
-        id: 1,
-        title: 'Hotel Booking System',
-        description: 'A comprehensive full-stack booking system designed for hotels to manage reservations, rooms, and customer data efficiently. The system features real-time room availability, secure payment integration with Stripe, and an intuitive admin panel for managing all aspects of the hotel operations.',
-        category: 'Full-Stack',
-        techStack: ['Django', 'Vue.js', 'MySQL', 'REST API', 'Stripe', 'Redis', 'Celery'],
-        year: '2024',
-        github: 'https://github.com/santa36264',
-        demo: '#',
-        image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800',
-        images: [
-          'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1200'
-        ],
-        features: [
-          'Real-time room availability and booking system',
-          'Secure payment processing with Stripe integration',
-          'Admin dashboard for managing rooms, bookings, and customers',
-          'Email notifications for booking confirmations',
-          'Advanced search and filtering options',
-          'Responsive design for all devices',
-          'Multi-language support',
-          'Booking history and analytics'
-        ]
-      },
-      2: {
-        id: 2,
-        title: 'Task Manager App',
-        description: 'A powerful real-time task management application that enables teams to collaborate effectively. Features include user authentication, task assignment, priority management, and real-time updates using WebSockets.',
-        category: 'Full-Stack',
-        techStack: ['Node.js', 'Express', 'MongoDB', 'Vue.js', 'Socket.io', 'JWT'],
-        year: '2024',
-        github: 'https://github.com/santa36264',
-        demo: '#',
-        image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-        images: [
-          'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200'
-        ],
-        features: [
-          'Real-time task updates with Socket.io',
-          'User authentication and authorization',
-          'Task assignment and priority levels',
-          'Deadline tracking and notifications',
-          'Team collaboration features',
-          'Task comments and attachments',
-          'Progress tracking and analytics',
-          'Mobile-responsive interface'
-        ]
-      },
-      3: {
-        id: 3,
-        title: 'E-Commerce Dashboard',
-        description: 'A comprehensive admin dashboard for e-commerce platforms with advanced analytics, product management, and inventory tracking capabilities. Features interactive charts and real-time data visualization.',
-        category: 'Full-Stack',
-        techStack: ['Laravel', 'React', 'MySQL', 'Chart.js', 'Redis', 'Tailwind CSS'],
-        year: '2023',
-        github: 'https://github.com/santa36264',
-        demo: '#',
-        image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-        images: [
-          'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1200'
-        ],
-        features: [
-          'Product management with bulk operations',
-          'Sales analytics and reporting',
-          'Inventory tracking and alerts',
-          'Order management system',
-          'Customer relationship management',
-          'Interactive charts and graphs',
-          'Export data to CSV/PDF',
-          'Role-based access control'
-        ]
-      },
-      4: {
-        id: 4,
-        title: 'Flutter Chat App',
-        description: 'A modern real-time messaging application built with Flutter and Firebase. Features include push notifications, media sharing, and cloud synchronization across devices.',
-        category: 'Mobile',
-        techStack: ['Flutter', 'Firebase', 'Cloud Firestore', 'FCM', 'Dart'],
-        year: '2024',
-        github: 'https://github.com/santa36264',
-        demo: '#',
-        image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-        images: [
-          'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/4050302/pexels-photo-4050302.jpeg?auto=compress&cs=tinysrgb&w=1200'
-        ],
-        features: [
-          'Real-time messaging with Firebase',
-          'Push notifications using FCM',
-          'Image and video sharing',
-          'User authentication and profiles',
-          'Group chat functionality',
-          'Message read receipts',
-          'Offline message caching',
-          'Beautiful Material Design UI'
-        ]
-      },
-      5: {
-        id: 5,
-        title: 'Weather Dashboard',
-        description: 'An elegant weather dashboard that provides live weather data and forecasts using the OpenWeather API. Features location-based forecasts, weather maps, and detailed analytics.',
-        category: 'Frontend',
-        techStack: ['Vue.js', 'Tailwind CSS', 'OpenWeather API', 'Chart.js', 'Axios'],
-        year: '2023',
-        github: 'https://github.com/santa36264',
-        demo: 'https://weather-dashboard-ecru-pi.vercel.app/',
-        image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-        images: [
-          'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/1118869/pexels-photo-1118869.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          'https://images.pexels.com/photos/1118877/pexels-photo-1118877.jpeg?auto=compress&cs=tinysrgb&w=1200'
-        ],
-        features: [
-          'Current weather conditions',
-          '7-day weather forecast',
-          'Hourly weather predictions',
-          'Location search and geolocation',
-          'Weather maps and radar',
-          'Temperature charts and graphs',
-          'Weather alerts and warnings',
-          'Favorite locations management'
-        ]
-      },
-      6: {
-        id: 6,
-        title: 'Portfolio Website',
-        description: 'This modern, responsive portfolio website showcasing projects, skills, and professional experience. Built with Vue.js and features dark mode, smooth animations, and multi-page navigation.',
-        category: 'Frontend',
-        techStack: ['Vue.js', 'Tailwind CSS', 'AOS', 'Vue Router', 'Vite'],
-        year: '2024',
-        github: 'https://github.com/santa36264/portfolio',
-        demo: '#',
-        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop',
-        features: [
-          'Multi-page navigation with Vue Router',
-          'Dark mode with localStorage persistence',
-          'Smooth scroll animations',
-          'Fully responsive design',
-          'Project showcase with filtering',
-          'Blog section for articles',
-          'Contact form with validation',
-          'GitHub stats integration'
-        ]
-      }
-    }
-    
-    onMounted(() => {
-      const projectId = parseInt(route.params.id)
-      project.value = projects[projectId] || null
-    })
-    
     const handleImageError = (event) => {
-      event.target.src = 'https://via.placeholder.com/1200x800/6366f1/ffffff?text=Project+Image'
+      event.target.src = '/placeholder.svg'
     }
     
     const nextImage = () => {

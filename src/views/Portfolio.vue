@@ -119,6 +119,7 @@
 <script>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { projects } from '../data/projectsData.js'
 
 export default {
   name: 'Portfolio',
@@ -126,65 +127,7 @@ export default {
     const router = useRouter()
     const selectedCategory = ref('All')
     
-    const categories = ['All', 'Full-Stack', 'Mobile', 'Frontend', 'Backend']
-    
-    const projects = [
-      {
-        id: 1,
-        title: 'Hotel Booking System',
-        description: 'Full-stack booking system with admin panel for managing reservations, rooms, and customer data. Features include real-time availability, payment integration, and booking management.',
-        category: 'Full-Stack',
-        techStack: ['Laravel', 'Vue.js', 'MySQL', 'REST API', 'Stripe'],
-        year: '2025',
-        image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 2,
-        title: 'Task Manager App',
-        description: 'Real-time task management application with user authentication and collaborative features. Includes task assignment, priority levels, and deadline tracking.',
-        category: 'Full-Stack',
-        techStack: ['Node.js', 'Express', 'MongoDB', 'React.js', 'Socket.io'],
-        year: '2025',
-        image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 3,
-        title: 'E-Commerce Dashboard',
-        description: 'Comprehensive admin dashboard with product management, sales analytics, and inventory tracking. Features interactive charts and real-time data updates.',
-        category: 'Full-Stack',
-        techStack: ['Laravel', 'Vue.js', 'MySQL', 'Chart.js', 'Redis'],
-        year: '2026',
-        image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 4,
-        title: 'Flutter Chat App',
-        description: 'Real-time messaging application with push notifications and media sharing capabilities. Built with Firebase for real-time synchronization and cloud storage.',
-        category: 'Mobile',
-        techStack: ['Flutter', 'Firebase', 'Cloud Firestore', 'FCM'],
-        year: '2026',
-        image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        id: 5,
-        title: 'Weather Dashboard',
-        description: 'Live weather data visualization using REST API with location-based forecasts. Features include 7-day forecast, weather maps, and location search.',
-        category: 'Frontend',
-        techStack: ['Vue.js', 'Tailwind', 'OpenWeather API', 'Chart.js'],
-        year: '2025',
-        image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-        demo: 'https://weather-dashboard-ecru-pi.vercel.app/'
-      },
-      {
-        id: 6,
-        title: 'Portfolio Website',
-        description: 'This responsive portfolio website showcasing projects and skills with dark mode support. Built with modern web technologies and smooth animations.',
-        category: 'Frontend',
-        techStack: ['Vue.js', 'Tailwind', 'AOS', 'Vue Router'],
-        year: '2024',
-        image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800'
-      }
-    ]
+    const categories = ['All', 'Full-Stack', 'Mobile', 'Frontend']
     
     const filteredProjects = computed(() => {
       if (selectedCategory.value === 'All') {
@@ -199,7 +142,7 @@ export default {
     
     const handleImageError = (event) => {
       // Fallback to a placeholder if image fails to load
-      event.target.src = 'https://via.placeholder.com/400x300/6366f1/ffffff?text=Project+Image'
+      event.target.src = '/placeholder.svg'
     }
     
     return {

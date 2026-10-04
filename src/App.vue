@@ -1,7 +1,8 @@
 <template>
   <div :class="{ 'dark': isDarkMode }" class="min-h-screen overflow-x-hidden">
+    <AnimatedBackground />
     <ErrorBoundary>
-      <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 overflow-x-hidden w-full">
+      <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 overflow-x-hidden w-full relative z-10">
         <Navbar :isDarkMode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
         <router-view />
         <Footer />
@@ -16,6 +17,7 @@
 <script>
 import { ref, onMounted, provide } from 'vue'
 import { useAccessibility } from './composables/useAccessibility.js'
+import AnimatedBackground from './components/AnimatedBackground.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import ChatWidget from './components/ChatWidget.vue'
@@ -26,6 +28,7 @@ import PerformanceMonitor from './components/PerformanceMonitor.vue'
 export default {
   name: 'App',
   components: {
+    AnimatedBackground,
     Navbar,
     Footer,
     ChatWidget,

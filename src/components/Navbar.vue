@@ -107,6 +107,6 @@ export default {
 }
 
 .mobile-nav-link.router-link-active {
-  @apply text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800;
+  @apply text-blue-600 dark:text-blue-400 bg-transparent;
 }
 </style>

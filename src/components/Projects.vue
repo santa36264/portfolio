@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 w-full overflow-hidden">
+  <section id="projects" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-transparent w-full overflow-hidden">
     <div class="max-w-7xl mx-auto w-full">
       <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
       <p class="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
