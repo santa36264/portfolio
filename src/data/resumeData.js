@@ -90,7 +90,7 @@ export const resumeData = {
     {
       name: "University Internship Management System",
       description: "Multi-role web platform for managing and monitoring university internships",
-      technologies: ["Django", "Vue.js", "MySQL", "REST API"],
+      technologies: ["React", "Node.js", "MySQL", "REST API", "Tailwind CSS"],
       highlights: [
         "Supports 5 user roles: Student, Academic Supervisor, Company Supervisor, Coordinator, Department Head",
         "Reduced internship coordination overhead by 60%",

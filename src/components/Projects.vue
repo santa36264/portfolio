@@ -280,7 +280,7 @@ export default {
         description: 'A comprehensive web-based platform for managing and monitoring university student internships, connecting students, supervisors, coordinators, and department heads.',
         fullDescription: 'A multi-role internship management system built for universities to streamline the entire internship lifecycle — from application and approval to progress tracking, evaluation, and final reporting.',
         category: 'Full-Stack',
-        techStack: ['Django', 'Vue.js', 'MySQL', 'REST API', 'Tailwind CSS'],
+        techStack: ['React', 'Node.js', 'MySQL', 'REST API', 'Tailwind CSS'],
         github: 'https://github.com/santa36264',
         demo: '#',
         image: '/UIMMS/loginpage.png',
@@ -353,7 +353,7 @@ export default {
         techStack: ['Vue.js', 'Tailwind CSS', 'AOS', 'Groq AI', 'Vite', 'Iconify'],
         github: 'https://github.com/santa36264/portfolio-v3',
         demo: 'https://semredemssie.dev',
-        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80',
+        image: '/Portfolio/home.png',
         challenges: [
           'Creating engaging user experience without overwhelming content',
           'Integrating AI chat while maintaining performance',
