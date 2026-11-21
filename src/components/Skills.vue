@@ -25,9 +25,9 @@
         </div>
       </div>
 
-      <!-- Mobile & Tools -->
+      <!-- Tools -->
       <div data-aos="fade-up" data-aos-delay="300">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 sm:mb-6 text-center">Mobile & Tools</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 sm:mb-6 text-center">Tools</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
           <div v-for="skill in toolsSkills" :key="skill.name" class="skill-card">
             <Icon :icon="skill.icon" class="text-3xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3" :style="{ color: skill.color }" />
@@ -70,8 +70,6 @@ export default {
     ]
 
     const toolsSkills = [
-      { name: 'Flutter', icon: 'logos:flutter', color: '#02569B' },
-      { name: 'Firebase', icon: 'logos:firebase', color: '#FFCA28' },
       { name: 'Git', icon: 'logos:git-icon', color: '#F05032' },
       { name: 'Docker', icon: 'logos:docker-icon', color: '#2496ED' }
     ]

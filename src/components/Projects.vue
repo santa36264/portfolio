@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto w-full">
       <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
       <p class="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
-        Here are some of my recent projects showcasing my skills in full-stack development and mobile applications. Each project includes detailed case studies, technical challenges, and measurable outcomes.
+        Here are some of my recent projects showcasing my skills in full-stack development. Each project includes detailed case studies, technical challenges, and measurable outcomes.
       </p>
       
       <!-- Loading State -->
@@ -178,7 +178,7 @@ export default {
         techStack: ['Django', 'Vue.js', 'PostgreSQL', 'Redis', 'Stripe API', 'WebSockets'],
         github: 'https://github.com/santa36264/hotel-booking-system',
         demo: 'https://hotel-demo.semredemssie.dev',
-        image: '/projects/project-1.jpg',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop&q=80',
         challenges: [
           'Real-time room availability synchronization across multiple booking channels',
           'Complex pricing algorithms with seasonal and demand-based adjustments',
@@ -213,7 +213,7 @@ export default {
         techStack: ['Node.js', 'Express', 'MongoDB', 'Vue.js', 'Socket.io', 'JWT'],
         github: 'https://github.com/santa36264/teamsync-app',
         demo: 'https://teamsync-demo.semredemssie.dev',
-        image: '/projects/project-2.jpg',
+        image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&auto=format&fit=crop&q=80',
         challenges: [
           'Real-time collaboration without performance degradation',
           'Complex permission system for different team roles',
@@ -248,7 +248,7 @@ export default {
         techStack: ['Laravel', 'React', 'MySQL', 'Chart.js', 'Python', 'TensorFlow'],
         github: 'https://github.com/santa36264/retailpro-dashboard',
         demo: 'https://retailpro-demo.semredemssie.dev',
-        image: '/projects/project-3.jpg',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80',
         challenges: [
           'Processing large datasets for real-time analytics',
           'Building accurate sales forecasting models',
@@ -276,39 +276,39 @@ export default {
         role: 'Senior Full-Stack Developer'
       },
       {
-        title: 'ChatFlow - Flutter Messaging App',
-        description: 'Feature-rich messaging application with end-to-end encryption, multimedia sharing, and group communication capabilities.',
-        fullDescription: 'A modern messaging application built with Flutter, featuring secure communication, real-time messaging, group chats, multimedia sharing, and advanced privacy controls.',
-        category: 'Mobile',
-        techStack: ['Flutter', 'Firebase', 'Cloud Firestore', 'Cloud Functions', 'FCM'],
-        github: 'https://github.com/santa36264/chatflow-flutter',
-        demo: 'https://play.google.com/store/apps/chatflow',
-        image: '/projects/project-4.jpg',
+        title: 'University Internship Management and Monitoring System',
+        description: 'A comprehensive web-based platform for managing and monitoring university student internships, connecting students, supervisors, coordinators, and department heads.',
+        fullDescription: 'A multi-role internship management system built for universities to streamline the entire internship lifecycle — from application and approval to progress tracking, evaluation, and final reporting.',
+        category: 'Full-Stack',
+        techStack: ['Django', 'Vue.js', 'MySQL', 'REST API', 'Tailwind CSS'],
+        github: 'https://github.com/santa36264',
+        demo: '#',
+        image: '/UIMMS/loginpage.png',
         challenges: [
-          'Implementing end-to-end encryption for secure messaging',
-          'Optimizing app performance for low-end devices',
-          'Building reliable offline message synchronization'
+          'Designing a role-based access system for five distinct user types',
+          'Building a real-time progress monitoring pipeline for supervisors',
+          'Managing document submission and feedback workflows efficiently'
         ],
         solutions: [
-          'Integrated Signal Protocol for secure message encryption',
-          'Implemented efficient caching and lazy loading strategies',
-          'Built robust offline-first architecture with sync queues'
+          'Implemented granular role-based permissions for each user type',
+          'Built a live dashboard with status updates and notification system',
+          'Created a structured document submission and review workflow'
         ],
         outcomes: [
-          '10,000+ downloads in first 3 months',
-          '99.9% message delivery success rate',
-          '4.8/5 average user rating'
+          'Reduced internship coordination overhead by 60%',
+          'Centralized tracking for 100+ students per semester',
+          'Fully adopted by the university department'
         ],
         features: [
-          'End-to-end encryption',
-          'Group messaging',
-          'Media sharing',
-          'Voice messages',
-          'Push notifications',
-          'Dark mode support'
+          'Multi-role access: Student, Academic Supervisor, Company Supervisor, Coordinator, Department Head',
+          'Internship application and approval workflow',
+          'Real-time progress monitoring and reporting',
+          'Document submission and feedback system',
+          'Evaluation and grading management',
+          'Role-based dashboards and analytics'
         ],
-        duration: '4 months',
-        role: 'Mobile App Developer'
+        duration: '5 months',
+        role: 'Full-Stack Developer'
       },
       {
         title: 'WeatherPro Dashboard',
@@ -318,7 +318,7 @@ export default {
         techStack: ['Vue.js', 'Tailwind CSS', 'OpenWeather API', 'Mapbox GL', 'Chart.js'],
         github: 'https://github.com/santa36264/weather-dashboard',
         demo: 'https://weather-dashboard-ecru-pi.vercel.app/',
-        image: '/projects/project-5.jpg',
+        image: '/WeatherDash/home.png',
         challenges: [
           'Integrating multiple weather data sources for accuracy',
           'Creating responsive interactive maps',
@@ -353,7 +353,7 @@ export default {
         techStack: ['Vue.js', 'Tailwind CSS', 'AOS', 'Groq AI', 'Vite', 'Iconify'],
         github: 'https://github.com/santa36264/portfolio-v3',
         demo: 'https://semredemssie.dev',
-        image: '/projects/project-6.jpg',
+        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80',
         challenges: [
           'Creating engaging user experience without overwhelming content',
           'Integrating AI chat while maintaining performance',

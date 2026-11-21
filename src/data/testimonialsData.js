@@ -28,13 +28,13 @@ export const testimonialsData = [
   {
     id: 3,
     name: "Aisha Tadesse",
-    position: "Product Owner",
-    company: "MobileFirst Solutions",
+    position: "University Coordinator",
+    company: "Addis Ababa University",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
     rating: 5,
-    testimonial: "Semre's Flutter development skills are outstanding. He delivered our chat application with features we didn't even think were possible. The app achieved 10,000+ downloads in just 3 months with a 4.8-star rating. His code quality and user experience focus are top-notch.",
-    project: "ChatFlow Mobile App",
-    date: "2022",
+    testimonial: "Semre built our University Internship Management and Monitoring System with remarkable attention to our workflow needs. The multi-role dashboard transformed how we coordinate student internships — what used to take weeks of back-and-forth now runs smoothly in one platform. Highly professional and responsive.",
+    project: "University Internship Management System",
+    date: "2025",
     linkedin: "https://linkedin.com/in/aisha-tadesse-po",
     verified: true
   },

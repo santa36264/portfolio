@@ -36,16 +36,16 @@
 
         <div data-aos="fade-left" class="flex flex-col justify-center">
           <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
-            Full-Stack Developer & Mobile App Specialist
+            Full-Stack Developer
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
             I'm Semre Demssie, a passionate full-stack developer with over 3<sup class="font-bold text-blue-500">+</sup> years of experience building 
-            scalable web applications and mobile solutions. My journey began with a curiosity about how 
+            scalable web applications. My journey began with a curiosity about how 
             technology could solve real-world problems, and it has evolved into a career dedicated to 
             creating exceptional digital experiences.
           </p>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-            Specializing in modern frameworks like Vue.js, Django, Node.js, and Flutter, I've had the 
+            Specializing in modern frameworks like Vue.js, Django, Node.js, and Laravel, I've had the 
             privilege of working with diverse clients from startups to established enterprises. What drives 
             me is the opportunity to transform ideas into functional, beautiful, and impactful applications.
           </p>
@@ -90,8 +90,8 @@
               <span class="text-sm text-blue-600 dark:text-blue-400 font-semibold">2024 - Present</span>
               <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900 dark:text-white">Senior Freelance Developer</h3>
               <p class="text-gray-600 dark:text-gray-400 mb-3">
-                Expanded into full-time freelancing, working with international clients on complex web and mobile 
-                applications. Specializing in Vue.js, Django, Flutter, and modern DevOps practices.
+                Expanded into full-time freelancing, working with international clients on complex web applications. 
+                Specializing in Vue.js, Django, and modern DevOps practices.
               </p>
               <div class="flex flex-wrap gap-2">
                 <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">15+ Projects</span>
@@ -120,14 +120,14 @@
             <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full"></div>
             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
               <span class="text-sm text-green-600 dark:text-green-400 font-semibold">2022 - 2023</span>
-              <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900 dark:text-white">Mobile Development Journey</h3>
+              <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900 dark:text-white">Backend & API Development</h3>
               <p class="text-gray-600 dark:text-gray-400 mb-3">
-                Dove deep into mobile app development with Flutter, creating cross-platform applications with 
-                native performance. Built chat applications, productivity tools, and social media apps.
+                Deepened expertise in backend architecture, building RESTful APIs, real-time systems, 
+                and database-driven applications with Django, Node.js, and Laravel.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Flutter Certified</span>
-                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">5 Apps Published</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">REST APIs</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">3 Production Apps</span>
               </div>
             </div>
           </div>
@@ -277,17 +277,17 @@
           <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
             <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
               <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7z M9 12h6M9 8h6M9 16h4"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Mobile Development</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">DevOps & Tools</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4">
-              Developing cross-platform mobile apps with native performance and beautiful UIs.
+              Managing deployments, version control, and development workflows with modern tooling.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Flutter</span>
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Firebase</span>
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Dart</span>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Git</span>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Docker</span>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Linux</span>
             </div>
           </div>
         </div>

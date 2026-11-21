@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto w-full">
       <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
       <p class="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
-        Here are some of my recent projects showcasing my skills in full-stack development and mobile applications.
+        Here are some of my recent projects showcasing my skills in full-stack development.
       </p>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">

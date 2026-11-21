@@ -8,20 +8,19 @@
         <div class="lg:col-span-2" data-aos="fade-right">
           <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10">
             <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
-              I'm a passionate <span class="font-semibold text-blue-600 dark:text-blue-400">Full-Stack Developer</span> and 
-              <span class="font-semibold text-blue-600 dark:text-blue-400">Flutter Mobile Developer</span> with expertise in building 
-              modern, scalable web and mobile applications. With a strong foundation in both frontend and 
+              I'm a passionate <span class="font-semibold text-blue-600 dark:text-blue-400">Full-Stack Developer</span> with expertise in building 
+              modern, scalable web applications. With a strong foundation in both frontend and 
               backend technologies, I create seamless user experiences and robust server-side solutions.
             </p>
             <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
               My journey in software development has equipped me with proficiency in frameworks like Django, 
-              Node.js, Express, and Flutter. I specialize in developing RESTful APIs, real-time 
+              Node.js, Express, and Laravel. I specialize in developing RESTful APIs, real-time 
               applications, and responsive interfaces that work flawlessly across all devices.
             </p>
             <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               I'm constantly learning and adapting to new technologies, always seeking to improve my craft 
               and deliver high-quality solutions. Whether it's building a complex web application or a 
-              feature-rich mobile app, I bring dedication, creativity, and technical excellence to every project.
+              feature-rich backend service, I bring dedication, creativity, and technical excellence to every project.
             </p>
             
             <!-- Resume Download Button -->
@@ -67,12 +66,6 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Full-Stack Web Development</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Mobile App Development</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

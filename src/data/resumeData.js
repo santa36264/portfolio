@@ -1,7 +1,7 @@
 export const resumeData = {
   personalInfo: {
     name: "Semre Demssie",
-    title: "Full-Stack Developer & Flutter Mobile Developer",
+    title: "Full-Stack Developer",
     email: "semredemssie36@gmail.com",
     phone: "+251 912 345 678",
     location: "Addis Ababa, Ethiopia",
@@ -10,7 +10,7 @@ export const resumeData = {
     linkedin: "https://www.linkedin.com/in/semre-demssie-9728b73a8/"
   },
 
-  summary: "Experienced Full-Stack Developer with 3+ years of expertise in building scalable web applications and mobile solutions. Proficient in modern frameworks like Vue.js, Django, Node.js, Laravel, and Flutter. Passionate about creating clean, efficient code and delivering exceptional user experiences. Proven track record of leading projects from conception to deployment with measurable business impact.",
+  summary: "Experienced Full-Stack Developer with 3+ years of expertise in building scalable web applications. Proficient in modern frameworks like Vue.js, Django, Node.js, and Laravel. Passionate about creating clean, efficient code and delivering exceptional user experiences. Proven track record of leading projects from conception to deployment with measurable business impact.",
 
   experience: [
     {
@@ -40,20 +40,6 @@ export const resumeData = {
         "Participated in agile development cycles and sprint planning"
       ],
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"]
-    },
-    {
-      title: "Mobile App Developer",
-      company: "MobileFirst Solutions",
-      location: "Addis Ababa, Ethiopia",
-      period: "Jun 2021 - Feb 2022", 
-      responsibilities: [
-        "Developed 5+ Flutter mobile applications for iOS and Android",
-        "Implemented real-time chat features using Firebase",
-        "Created offline-first architecture for improved user experience",
-        "Conducted user testing and iterative improvements",
-        "Published apps to Google Play Store and Apple App Store"
-      ],
-      technologies: ["Flutter", "Dart", "Firebase", "SQLite", "REST APIs"]
     }
   ],
 
@@ -75,9 +61,8 @@ export const resumeData = {
   skills: {
     frontend: ["Vue.js", "React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
     backend: ["Django", "Node.js", "Express", "Laravel", "PHP", "Python"],
-    mobile: ["Flutter", "Dart", "React Native"],
     databases: ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"],
-    tools: ["Git", "Docker", "AWS", "Firebase", "Heroku", "Postman"],
+    tools: ["Git", "Docker", "AWS", "Heroku", "Postman"],
     other: ["REST APIs", "GraphQL", "WebSockets", "Microservices", "Agile/Scrum"]
   },
 
@@ -103,13 +88,13 @@ export const resumeData = {
       ]
     },
     {
-      name: "ChatFlow Mobile App",
-      description: "Secure messaging application with end-to-end encryption",
-      technologies: ["Flutter", "Firebase", "Cloud Functions"],
+      name: "University Internship Management System",
+      description: "Multi-role web platform for managing and monitoring university internships",
+      technologies: ["Django", "Vue.js", "MySQL", "REST API"],
       highlights: [
-        "10,000+ downloads in first 3 months",
-        "4.8/5 average user rating",
-        "99.9% message delivery success rate"
+        "Supports 5 user roles: Student, Academic Supervisor, Company Supervisor, Coordinator, Department Head",
+        "Reduced internship coordination overhead by 60%",
+        "Fully adopted by university department"
       ]
     }
   ],
@@ -120,12 +105,6 @@ export const resumeData = {
       issuer: "Amazon Web Services",
       date: "2023",
       credentialId: "AWS-SAA-C03"
-    },
-    {
-      name: "Flutter Development Bootcamp",
-      issuer: "Google Developers",
-      date: "2022",
-      credentialId: "GD-FDB-2022"
     },
     {
       name: "Full-Stack Web Development",

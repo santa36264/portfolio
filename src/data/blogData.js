@@ -931,7 +931,7 @@ export const blogCategories = [
 ]
 
 export const popularTags = [
-  "Vue.js", "React", "Django", "Flutter", "JavaScript", "Python", 
+  "Vue.js", "React", "Django", "JavaScript", "Python", 
   "Node.js", "CSS", "Performance", "Architecture", "Security", 
   "Docker", "Kubernetes", "Best Practices"
 ]

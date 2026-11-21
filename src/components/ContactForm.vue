@@ -138,7 +138,6 @@
         >
           <option value="">Select a project type</option>
           <option value="web-development">Web Development</option>
-          <option value="mobile-app">Mobile App Development</option>
           <option value="full-stack">Full-Stack Application</option>
           <option value="api-development">API Development</option>
           <option value="consultation">Technical Consultation</option>

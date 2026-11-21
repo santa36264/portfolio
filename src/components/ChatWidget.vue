@@ -173,9 +173,9 @@ export default {
     const apiKey = import.meta.env.VITE_GROQ_API_KEY
 
     const systemPrompt = `You are a helpful AI assistant on Semre Demssie's portfolio website.
-Semre is a Full-Stack Developer and Flutter Mobile Developer.
-He specializes in Vue.js, Django, Node.js, Laravel, Flutter, and Firebase.
-His projects include a Hotel Booking System, Task Manager App, E-Commerce Dashboard, Flutter Chat App, and Weather Dashboard.
+Semre is a Full-Stack Developer.
+He specializes in Vue.js, Django, Node.js, and Laravel.
+His projects include a Hotel Booking System, Task Manager App, E-Commerce Dashboard, Weather Dashboard, University Internship Management and Monitoring System, and a Portfolio Website.
 You can answer questions about his skills, projects, and services, or help with general programming questions.
 Keep responses concise and friendly.`
 

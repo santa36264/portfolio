@@ -24,12 +24,12 @@
         </h1>
         
         <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 px-2" data-aos="fade-up" data-aos-delay="100">
-          Full-Stack Developer & Flutter Mobile Developer
+          Full-Stack Developer
         </h2>
         
         <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 px-4" data-aos="fade-up" data-aos-delay="200">
-          I build modern web applications and mobile experiences with clean code and intuitive design. 
-          Passionate about creating scalable solutions that make a difference.
+          I build modern web applications with clean code and intuitive design. 
+          Passionate about creating scalable full-stack solutions that make a difference.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4" data-aos="fade-up" data-aos-delay="300">

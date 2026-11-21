@@ -8,7 +8,7 @@
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
           Insights, tutorials, and best practices from my development journey. 
-          Sharing knowledge about modern web development, mobile apps, and software architecture.
+          Sharing knowledge about modern web development and software architecture.
         </p>
         
         <!-- Newsletter Signup -->

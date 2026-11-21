@@ -45,8 +45,8 @@ export function useSEO() {
 
   const setPageSEO = ({
     title = 'Semre Demssie - Full-Stack Developer',
-    description = 'Experienced Full-Stack Developer specializing in Vue.js, Django, Node.js, Laravel, and Flutter.',
-    keywords = 'Full-Stack Developer, Flutter Developer, Vue.js, Django, Node.js, Laravel, Mobile App Development',
+    description = 'Experienced Full-Stack Developer specializing in Vue.js, Django, Node.js, and Laravel.',
+    keywords = 'Full-Stack Developer, Vue.js, Django, Node.js, Laravel, Web Development',
     url = 'https://semredemssie.dev',
     image = 'https://semredemssie.dev/profile.jpg',
     type = 'website',

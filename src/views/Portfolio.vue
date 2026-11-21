@@ -87,7 +87,7 @@
               <span class="text-sm text-gray-500 dark:text-gray-400">{{ project.year }}</span>
               <div class="flex items-center gap-3">
                 <a
-                  v-if="project.demo"
+                  v-if="project.demo && project.demo !== '#'"
                   :href="project.demo"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -127,7 +127,7 @@ export default {
     const router = useRouter()
     const selectedCategory = ref('All')
     
-    const categories = ['All', 'Full-Stack', 'Mobile', 'Frontend']
+    const categories = ['All', 'Full-Stack', 'Frontend']
     
     const filteredProjects = computed(() => {
       if (selectedCategory.value === 'All') {

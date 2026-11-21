@@ -14,7 +14,7 @@
           Get In Touch
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Have a project in mind? Let's discuss how I can help bring your ideas to life with modern web and mobile solutions.
+          Have a project in mind? Let's discuss how I can help bring your ideas to life with modern web solutions.
         </p>
       </div>
 

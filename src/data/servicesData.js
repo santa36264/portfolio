@@ -30,34 +30,6 @@ export const services = [
   },
   {
     id: 2,
-    title: "Mobile App Development",
-    description: "Cross-platform mobile applications that work seamlessly on iOS and Android devices.",
-    icon: "mobile-development",
-    features: [
-      "Cross-platform development",
-      "Native performance",
-      "Custom UI/UX design",
-      "Firebase integration",
-      "Push notifications",
-      "App store deployment"
-    ],
-    technologies: [
-      "Flutter", "Dart", "Firebase",
-      "SQLite", "REST APIs", "WebSockets"
-    ],
-    startingPrice: 1500,
-    deliveryTime: "3-10 weeks",
-    category: "Development",
-    popular: true,
-    examples: [
-      "Business productivity apps",
-      "Social media applications",
-      "E-commerce mobile apps",
-      "Real-time chat applications"
-    ]
-  },
-  {
-    id: 3,
     title: "API Development & Integration",
     description: "Robust RESTful APIs and seamless third-party service integrations.",
     icon: "api-development",
@@ -85,7 +57,7 @@ export const services = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: "Database Design & Optimization",
     description: "Efficient database architecture and performance optimization for scalable applications.",
     icon: "database",
@@ -113,7 +85,7 @@ export const services = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     title: "DevOps & Deployment",
     description: "Complete CI/CD pipeline setup and cloud deployment solutions.",
     icon: "devops",
@@ -141,7 +113,7 @@ export const services = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     title: "Code Review & Consultation",
     description: "Expert code review and technical consultation to improve your existing projects.",
     icon: "consultation",
@@ -223,14 +195,13 @@ export const packages = [
       "Microservices architecture",
       "Advanced security features",
       "Third-party integrations",
-      "Mobile app (iOS & Android)",
       "CI/CD pipeline setup",
       "Cloud deployment",
       "Load balancing & scaling",
       "Advanced analytics",
       "6 months support"
     ],
-    technologies: ["Vue.js", "Django", "Flutter", "AWS", "Docker"],
+    technologies: ["Vue.js", "Django", "Node.js", "AWS", "Docker"],
     suitable: ["Large enterprises", "Complex platforms", "Multi-user systems"],
     popular: false
   }
@@ -314,7 +285,7 @@ export const process = [
 export const faqs = [
   {
     question: "What technologies do you specialize in?",
-    answer: "I specialize in modern web and mobile development technologies including Vue.js, React, Django, Node.js, Flutter, and various databases like PostgreSQL and MongoDB. I stay updated with the latest industry trends and best practices."
+    answer: "I specialize in modern web development technologies including Vue.js, React, Django, Node.js, Laravel, and various databases like PostgreSQL and MongoDB. I stay updated with the latest industry trends and best practices."
   },
   {
     question: "How long does a typical project take?",
